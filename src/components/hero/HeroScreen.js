@@ -45,7 +45,10 @@ export const HeroScreen = () => {
                     </li>
                     <li className="list-group-item">
                         <b>Publisher:</b> {publisher}
-                    </li>                    
+                    </li> 
+                    <li className="list-group-item">
+                        <b>First Appearance:</b> {first_appearance}
+                    </li>                                         
                 </ul>
                 
                 <h5 className="mt-3">Characters</h5>
