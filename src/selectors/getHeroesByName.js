@@ -1,10 +1,11 @@
-import {heroes} from '../data/heroes';
-/* eslint-disable no-unused-vars */
-export const getHeroesByName = (name = '') => {
+import { heroes } from '../data/heroes';
 
-    console.log('getHeroesByName called');
+
+export const getHeroesByName = ( name = '') => {
     
-    if (name.length === 0) {
+    console.log('getHeroesByName called');
+
+    if ( name.length === 0 ) {
         return [];
     }
 
@@ -12,4 +13,3 @@ export const getHeroesByName = (name = '') => {
     return heroes.filter(hero => hero.superhero.toLowerCase().includes(name));
 
 }
-/* eslint-disable no-unused-vars */
