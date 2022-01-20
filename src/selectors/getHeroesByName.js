@@ -1,5 +1,5 @@
 import {heroes} from '../data/heroes';
-
+/* eslint-disable no-unused-vars */
 export const getHeroesByName = (name = '') => {
 
     console.log('getHeroesByName called');
@@ -12,3 +12,4 @@ export const getHeroesByName = (name = '') => {
     return heroes.filter(hero => hero.superhero.toLowerCase().includes(name));
 
 }
+/* eslint-disable no-unused-vars */
