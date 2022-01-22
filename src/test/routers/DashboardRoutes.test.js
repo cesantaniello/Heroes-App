@@ -13,10 +13,10 @@ describe('Tests on <DashboardRoutes />', () => {
         }
     }
 
-    test('Should render correctly', () => {
+    test('Should render correctly - Marvel', () => {
         const wrapper = mount(
             <AuthContext.Provider value={contextValue}>
-                <MemoryRouter>
+                <MemoryRouter initialEntries={['/']}>
                     <DashboardRoutes />
                 </MemoryRouter>
             </AuthContext.Provider>
@@ -24,4 +24,17 @@ describe('Tests on <DashboardRoutes />', () => {
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.find('.text-info').text().trim()).toBe('Test User');
     });
+
+    test('Should render correctly - DC', () => {
+        const wrapper = mount(
+            <AuthContext.Provider value={contextValue}>
+                <MemoryRouter initialEntries={['/dc']}>
+                    <DashboardRoutes />
+                </MemoryRouter>
+            </AuthContext.Provider>
+        );
+        expect(wrapper).toMatchSnapshot();
+        expect(wrapper.find('h1').text().trim()).toBe('DC Screen');
+    });
+
 })
