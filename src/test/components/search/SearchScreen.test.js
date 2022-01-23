@@ -1,8 +1,9 @@
 import { mount } from "enzyme";
 import { MemoryRouter } from "react-router-dom";
-import { SearchScreen } from "../../components/search/SearchScreen";
+import { SearchScreen } from "../../../components/search/SearchScreen";
 
 const mockNavigate = jest.fn();
+
 jest.mock("react-router-dom", () => ({
     ...jest.requireActual("react-router-dom"),
     useNavigate: () => mockNavigate,
