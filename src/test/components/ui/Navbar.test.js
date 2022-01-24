@@ -41,13 +41,9 @@ describe('Tests on <Navbar />', () => {
     })
 
     test('Should call logout, call navigate and dispatch with values', () => {
-        // const logout = jest.fn();
-        // const navigate = jest.fn();
-        // const dispatch = jest.fn();
-        // const wrapper = render(<Navbar logout={logout} navigate={navigate} dispatch={dispatch} />);
+
         wrapper.find('button').prop('onClick')();
-        // expect(logout).toHaveBeenCalled();
-        // expect(navigate).toHaveBeenCalled();
+
         expect(contextValue.dispatch).toHaveBeenCalledWith({"type": types.logout});
         expect(mockNavigate).toHaveBeenCalledWith('/login', {replace: true});
     })
