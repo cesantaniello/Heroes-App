@@ -29,24 +29,4 @@ describe('Tests on <PrivateRoute />', () => {
         expect(wrapper.text().trim()).toBe('Private Component');
     })
 
-    test('Should block the component if it is not authenticated', () => {
-            
-            const contextValue = {
-                user: {
-                    logged: false,
-                }
-            };
-            
-            const wrapper = mount(
-                <AuthContext.Provider value={contextValue}>
-                    <MemoryRouter initialEntries={['/']}>
-                        <PrivateRoute>
-                            <h1>Private Component</h1>
-                        </PrivateRoute>
-                    </MemoryRouter>
-                </AuthContext.Provider>
-            );
-    
-            expect(wrapper.text().trim()).toBe('Exit');
-    })
 })
